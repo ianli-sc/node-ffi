@@ -35,13 +35,20 @@
     "ref-array": "1"
   },
   "scripts": {
-    "test": "node-gyp rebuild --directory test && mocha -gc --reporter spec"
+    "test": "node-gyp rebuild --directory test && mocha -gc --reporter spec",
+    "install": "node-gyp rebuild"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/node-ffi/node-ffi.git"
+    "url": "git+ssh://git@github.com/node-ffi/node-ffi.git"
   },
   "bugs": {
     "url": "http://github.com/node-ffi/node-ffi/issues"
+  },
+  "gypfile": true,
+  "directories": {
+    "example": "example",
+    "lib": "lib",
+    "test": "test"
   }
 }
